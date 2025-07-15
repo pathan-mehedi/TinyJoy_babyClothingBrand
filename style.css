@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.whatsapp-button {
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.swiper-container {
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #8b5cf6;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: #8b5cf6;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  background: #8b5cf6 !important;
+  color: white !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+
+@media (min-width: 1024px) {
+  .owl-carousel .owl-nav button.owl-next {
+    right: -40px;
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -40px;
+  }
+}
+
+.owl-carousel .owl-dots {
+  margin-top: 20px;
+}
+
+.owl-carousel .owl-dots button.owl-dot span {
+  background: #cbd5e0;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+}
+
+.owl-carousel .owl-dots button.owl-dot.active span {
+  background: #8b5cf6;
+}
+
+.hero-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1),
+              0 5px 5px -5px rgba(0, 0, 0, 0.04);
+}
+
