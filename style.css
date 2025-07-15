@@ -1,171 +1,138 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-body {
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+/* Custom CSS for elements that need more styling than Tailwind provides */
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
-.product-card {
-  transition: all 0.3s ease;
-  transform: translateY(0);
-}
-
-.product-card:hover {
+.service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.whatsapp-button {
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
-.whatsapp-button:hover {
+.whatsapp-float:hover {
+  background-color: #128c7e;
   transform: scale(1.1);
 }
 
-.testimonial-card {
-  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-}
-
-.swiper-container {
-  padding: 20px 0;
-}
-
-.swiper-slide {
-  height: auto;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #8b5cf6;
-  background: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 1rem;
-}
-
-.swiper-pagination-bullet-active {
-  background: #8b5cf6;
-}
-
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-prev {
-  background: #8b5cf6 !important;
-  color: white !important;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.owl-carousel .owl-nav button.owl-next {
-  right: 0;
-}
-
-.owl-carousel .owl-nav button.owl-prev {
-  left: 0;
-}
-
-@media (min-width: 1024px) {
-  .owl-carousel .owl-nav button.owl-next {
-    right: -40px;
+/* Animation for booking confirmation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .owl-carousel .owl-nav button.owl-prev {
-    left: -40px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.owl-carousel .owl-dots {
-  margin-top: 20px;
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-.owl-carousel .owl-dots button.owl-dot span {
-  background: #cbd5e0;
-  width: 10px;
-  height: 10px;
-  margin: 5px;
-}
-
-.owl-carousel .owl-dots button.owl-dot.active span {
-  background: #8b5cf6;
-}
-
-.hero-image {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.testimonial-card:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1),
-    0 5px 5px -5px rgba(0, 0, 0, 0.04);
-}
-
-.collection-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.item-card {
-  background: #fff;
+/* Google Reviews Carousel Modern Styles */
+#google-reviews-carousel {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  min-height: 260px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  padding: 2rem 0.5rem;
+  margin-bottom: 2rem;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
-.item-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+#google-reviews-carousel .flex {
+  gap: 1.5rem;
 }
 
-.item-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+#google-reviews-carousel .bg-gray-800 {
+  background: rgba(30, 41, 59, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.item-card h2 {
-  margin: 1rem;
-  color: #8b5cf6;
-  font-size: 1.25rem;
+#google-reviews-carousel .bg-gray-800:hover {
+  transform: scale(1.04) translateY(-6px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
 }
 
-.item-card p {
-  margin: 0 1rem 1.5rem;
-  font-size: 0.95rem;
-  color: #666;
+#google-reviews-carousel .font-bold {
+  letter-spacing: 0.02em;
 }
 
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f4f4f8;
-  font-size: 0.875rem;
-  color: #999;
+#google-reviews-carousel .text-amber-400 i,
+#google-reviews-carousel .text-amber-400 .fas {
+  filter: drop-shadow(0 1px 2px #0002);
+  font-size: 1.1em;
+}
+
+#google-reviews-carousel .text-xs {
+  opacity: 0.7;
+}
+
+#google-review-prev,
+#google-review-next {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+
+#google-review-prev:hover,
+#google-review-next:hover {
+  background: #fbbf24;
+  color: #232526;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  #google-reviews-carousel .bg-gray-800 {
+    min-width: 90vw;
+    width: 90vw;
+    margin: 0 auto 1.5rem auto;
+  }
+  #google-reviews-carousel .flex {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #google-reviews-carousel {
+    padding: 1rem 0.2rem;
+    min-height: 220px;
+  }
+  #google-review-prev,
+  #google-review-next {
+    top: 90%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Smooth fade for carousel */
+#google-reviews-carousel .flex {
+  will-change: transform, opacity;
 }
