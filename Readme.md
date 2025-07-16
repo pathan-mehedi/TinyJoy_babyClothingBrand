@@ -27,8 +27,8 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/pathan-mehedi/TinyJoy_babyClothingBrand.git
-   cd TinyJoy_babyClothingBrand
+   git clone https://github.com/yourusername/tinyjoy-minis.git
+   cd tinyjoy-minis
    ```
 
 2. **Open `index.html` in your browser.**  
@@ -70,5 +70,5 @@ Feel free to use and modify for your own baby clothing brand or landing page!
 
 ---
 
-**Made with ❤️ for TinyJoy ClothingBrand by ClawZio**
+**Made with ❤️ for TinyJoy Minis**
 
